@@ -6,11 +6,11 @@
 #    By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/24 15:49:32 by gpetrov           #+#    #+#              #
-#    Updated: 2014/01/31 14:23:22 by gpetrov          ###   ########.fr        #
+#    Updated: 2014/01/31 16:28:47 by gpetrov          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
-NAME	= minishell2
+NAME	= ft_minishell2
 FILES	= main.c path.c tools.c
 SRCS	= $(addprefix src/, $(FILES))
 OBJS	= $(SRCS:src/%.c=.obj/%.o)

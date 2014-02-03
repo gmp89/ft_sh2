@@ -6,7 +6,7 @@
 /*   By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/26 23:14:25 by gpetrov           #+#    #+#             */
-/*   Updated: 2014/01/26 23:16:55 by gpetrov          ###   ########.fr       */
+/*   Updated: 2014/02/03 13:40:19 by gpetrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ char	**ft_get_path(char **tab)
 
 	tmp = ft_strsplit(tab[0] + 5, ':');
 	i = ft_count_c(tab[0], ':') + 1;
-	path = (char **)malloc(i * sizeof(*path));
-	path[i] = 0;
+	path = (char **)malloc((i + 2) * sizeof(*path));
+	path[i + 2] = 0;
 	j = 0;
 	while (j < i)
 	{
@@ -54,9 +54,10 @@ int		ft_get_cmd(t_data *data)
 {
 	char	**tab;
 
+	get_next_line(0, &data->prompt);
+	data->prompt = ft_strtrim(data->prompt);
 	if (ft_strcmp(data->prompt, "exit") == 0)
 		_exit(0);
-	get_next_line(0, &data->prompt);
 	if (ft_strcmp(data->prompt, "\0") == 0)
 		return (1);
 	tab = ft_strsplit(data->prompt, ' ');

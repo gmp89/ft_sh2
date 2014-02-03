@@ -6,7 +6,7 @@
 /*   By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/24 15:49:20 by gpetrov           #+#    #+#             */
-/*   Updated: 2014/01/31 14:54:31 by gpetrov          ###   ########.fr       */
+/*   Updated: 2014/02/03 12:55:18 by gpetrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ char	*ft_direct_exec(t_data *data);
 void	ft_get_pwd(t_data *data, char **env);
 void	ft_cd_help(t_data *data);
 void	print_pid_error(void);
+void	ft_cmd_error(void);
+void	ft_set_prompt(t_data *data);
 
 #endif
